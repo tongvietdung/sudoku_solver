@@ -1,0 +1,459 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Jul 18 22:35:01 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile', line 18)
+OUTPUT := output
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 21)
+SRC := src
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/tongvietdung/.gtkrc:/home/tongvietdung/.config/gtkrc
+# makefile (from 'Makefile', line 44)
+MD := mkdir -p
+# environment
+LC_NAME = en_AG
+# environment
+LC_NUMERIC = en_AG
+# environment
+VSCODE_CWD = /home/tongvietdung
+# makefile (from 'Makefile', line 51)
+LIBS := -Llib
+# environment
+LC_ADDRESS = en_AG
+# default
+MAKE_COMMAND := make
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/tongvietdung/Documents/dev/sudoku_solver
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+MAIL = /var/spool/mail/tongvietdung
+# environment
+OLDPWD = /home/tongvietdung
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/tongvietdung/.config/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/tongvietdung/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/tongvietdung/Documents/dev/sudoku_solver
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrR
+# makefile (from 'Makefile', line 65)
+OUTPUTMAIN := output/main
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /home/tongvietdung/.config/kdedefaults:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XCURSOR_THEME = PearDarkCursors
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 62867
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 48)
+INCLUDES := -Iinclude -Iinclude/imgui
+# environment
+SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/734,unix/Poggo-Dogu:/tmp/.ICE-unix/734
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 27)
+LIB := lib
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'Makefile', line 24)
+INCLUDE := include
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+# default
+MAKEFILES := 
+# environment
+LC_MONETARY = en_AG
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = en_AG
+# makefile (from 'Makefile', line 38)
+MAIN := main
+# environment
+INVOCATION_ID = a229afb4d3ad43d5832f798bef3b48e9
+# makefile (from 'Makefile', line 41)
+LIBDIRS := lib
+# environment
+LC_TELEPHONE = en_AG
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# makefile (from 'Makefile', line 40)
+INCLUDEDIRS := include include/imgui
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# makefile (from 'Makefile', line 57)
+OBJECTS := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+BROWSER = firefox
+# environment
+LOGNAME = tongvietdung
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 769
+# makefile (from 'Makefile', line 43)
+RM = rm -f
+# environment
+EDITOR = nano
+# environment
+DISPLAY = :0
+# environment
+GTK_MODULES = canberra-gtk-module
+# environment
+USER = tongvietdung
+# default
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# 'override' directive
+.SHELLSTATUS := 0
+# makefile (from 'Makefile', line 42)
+FIXPATH = $1
+# environment
+MANAGERPID = 687
+# environment
+LC_MEASUREMENT = en_AG
+# makefile (from 'Makefile', line 39)
+SOURCEDIRS := src
+# environment
+_ = /usr/bin/make
+# environment
+LC_PAPER = en_AG
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+JOURNAL_STREAM = 8:25907
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/tongvietdung/.gtkrc-2.0:/home/tongvietdung/.config/gtkrc-2.0
+# environment
+HOME = /home/tongvietdung
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+ 
+VSCODE_IPC_HOOK = /run/user/1000/vscode-3526e221-1.69.1-main.sock
+# environment
+XDG_SESSION_ID = 2
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'Makefile', line 10)
+CXXFLAGS := -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# makefile (from 'Makefile', line 7)
+CXX = g++
+# makefile (from 'Makefile', line 15)
+LFLAGS = 
+# makefile (from 'Makefile', line 54)
+SOURCES := src/imgui.cpp src/imgui_demo.cpp src/imgui_draw.cpp src/imgui_impl_glfw.cpp src/imgui_impl_opengl3.cpp src/imgui_tables.cpp src/imgui_widgets.cpp src/main.cpp src/solver.cpp
+# environment
+KDE_FULL_SESSION = true
+# environment
+LC_IDENTIFICATION = en_AG
+# variable set hash-table stats:
+# Load=125/1024=12%, Rehash=0, Collisions=11/193=6%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src (device 66311, inode 6176064): 21 files, no impossibilities.
+# . (device 66311, inode 6175812): 8 files, no impossibilities.
+
+# 29 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+src/solver.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:32:01.745040768
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/imgui.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:30:24.055067516
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:31:19.445053211
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/imgui_draw.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:30:26.135067022
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/imgui_tables.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:31:23.185052162
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/imgui_impl_glfw.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:30:26.295066983
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 85):
+	$(RM) $(OUTPUTMAIN)
+	$(RM) $(call FIXPATH,$(OBJECTS))
+	@echo Cleanup complete!
+
+.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 81):
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
+
+# Not a target:
+src/main.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:32:01.445040861
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+output:
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-18 22:32:20.165034965
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 71):
+	$(MD) $(OUTPUT)
+
+ 
+all: output main
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/10=0%
+#  recipe to execute (from 'Makefile', line 68):
+	@echo Executing 'all' complete!
+
+run: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 90):
+	./$(OUTPUTMAIN)
+	@echo Executing 'run: all' complete!
+
+main: src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main
+# automatic
+# * := 
+# automatic
+# < := src/imgui.o
+# automatic
+# + := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# automatic
+# % := 
+# automatic
+# ^ := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# automatic
+# ? := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=4/18=22%
+#  recipe to execute (from 'Makefile', line 74):
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS)
+
+# Not a target:
+src/imgui_impl_opengl3.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:31:22.215052437
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/imgui_widgets.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:31:24.725051726
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/imgui_demo.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:30:24.825067332
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=19/1024=2%, Rehash=0, Collisions=0/47=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 46 / storage = 553 B / avg = 12 B
+# current buf: size = 8162 B / used = 553 B / count = 46 / avg = 12 B
+
+# strcache performance: lookups = 67 / hit rate = 31%
+# hash-table stats:
+# Load=46/8192=1%, Rehash=0, Collisions=0/67=0%
+# Finished Make data base on Mon Jul 18 22:35:01 2022
+
+ 

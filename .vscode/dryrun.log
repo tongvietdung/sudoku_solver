@@ -1,0 +1,16 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/tongvietdung/Documents/dev/sudoku_solver'
+mkdir -p output
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui.cpp  -o src/imgui.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui_demo.cpp  -o src/imgui_demo.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui_draw.cpp  -o src/imgui_draw.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui_impl_glfw.cpp  -o src/imgui_impl_glfw.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui_impl_opengl3.cpp  -o src/imgui_impl_opengl3.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui_tables.cpp  -o src/imgui_tables.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/imgui_widgets.cpp  -o src/imgui_widgets.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/main.cpp  -o src/main.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/solver.cpp  -o src/solver.o
+g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -o output/main src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o  -Llib
+echo Executing 'all' complete!
+make: Leaving directory '/home/tongvietdung/Documents/dev/sudoku_solver'
+ 
