@@ -11,7 +11,7 @@
 #include <GLES2/gl2.h>
 #endif
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
-#include <solver.h>
+#include "backtracking.h"
 
 // [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
 // To link with VS2010-era libraries, VS2015+ requires linking with legacy_stdio_definitions.lib, which we do using this pragma.
@@ -56,7 +56,7 @@ int main(int, char**)
 #endif
 
     // Create window with graphics context
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "Dear ImGui GLFW+OpenGL3 example", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "Sudoku Solver", NULL, NULL);
     if (window == NULL)
         return 1;
     glfwMakeContextCurrent(window);
@@ -104,10 +104,16 @@ int main(int, char**)
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != NULL);
 
+    // My Code to run outside loop
+    Backtracking solver;
+    solver.get_input();
+    double runtime = solver.solve();
+
     // Our state
     bool show_demo_window = true;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
     // Main loop
     while (!glfwWindowShouldClose(window))
     {
@@ -123,9 +129,9 @@ int main(int, char**)
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        // // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-        // if (show_demo_window)
-        //     ImGui::ShowDemoWindow(&show_demo_window);
+        // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
+        if (show_demo_window)
+            ImGui::ShowDemoWindow(&show_demo_window);
 
         // // 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
         // {
@@ -160,7 +166,38 @@ int main(int, char**)
         //     ImGui::End();
         // }
         
-        // My Code
+        bool show_close = true;
+        // My Code to run in loop
+        ImGui::Begin("Backtracking Algorithm", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
+            ImGui::BeginChild("Original Sudoku", ImVec2(145, 180));
+                ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original Sudoku");
+                for (int row = 0; row < 9; row++) {
+                    string rowStr = "";
+                    for (int col = 0; col < 9; col++) {
+                        ImGui::Text(to_string(solver.sudoku[row][col]).c_str());
+                        ImGui::SameLine();
+                    }
+                    ImGui::Text("");
+                }
+            ImGui::EndChild();
+
+            ImGui::SameLine();
+
+            ImGui::BeginChild("Solution", ImVec2(145, 180));
+                ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Solution");
+                for (int row = 0; row < 9; row++) {
+                    string rowStr = "";
+                    for (int col = 0; col < 9; col++) {
+                        ImGui::Text(to_string(solver.result[row][col]).c_str());
+                        ImGui::SameLine();
+                    }
+                    ImGui::Text("");
+                }
+            ImGui::EndChild();
+            ImGui::Text("Runtime %f ms", runtime);
+        ImGui::End();
+
+
         // Rendering
         ImGui::Render();
         int display_w, display_h;
