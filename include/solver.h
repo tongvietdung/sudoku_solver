@@ -1,12 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
+#include <vector>
 using namespace std;
 
 const int MAX_DIM = 9;
 const int SUM = (MAX_DIM+1)*MAX_DIM/2;
 int sudoku[MAX_DIM][MAX_DIM];
-
 // Read sudoku from input.txt
 void get_input() {
     ifstream Input("input.txt");
@@ -27,22 +27,6 @@ void get_input() {
     Input.close();
 }
 
-// A function to print solution to console
-void result() {
-    int empty_count = 0;
-    cout << "Result Sudoku:" << endl;
-    for (auto& rows : sudoku) {
-        for (auto& cell : rows) {
-            cout << cell << " ";
-            if (cell == 0) {
-                empty_count ++;
-            }
-        }
-        cout << endl;
-    }
-    // cout << "Completion : " << (MAX_DIM*MAX_DIM - empty_count)*100/(MAX_DIM*MAX_DIM) << "%\n";
-}
-
 /*-----------------------------------------Backtracking-----------------------------------------*/
 #pragma region Backtracking
 bool next_unassigned_cell(int sudoku[MAX_DIM][MAX_DIM], int& row, int& col) {
@@ -58,7 +42,7 @@ bool next_unassigned_cell(int sudoku[MAX_DIM][MAX_DIM], int& row, int& col) {
 bool is_valid(int sudoku[MAX_DIM][MAX_DIM], int row, int col, int candidate) {
     // Check row and column
     for (int i = 0; i < MAX_DIM; i++) {
-        if (candidate == sudoku[row][i] || candidate == sudoku[i][col]) {
+        if (sudoku[row][i] == candidate || candidate == sudoku[i][col]) {
             return false;
         }
     }
@@ -104,14 +88,14 @@ bool backtracking(int sudoku[MAX_DIM][MAX_DIM]) {
 #pragma endregion Simulated Annealing
 
 /*---------------------------------------------Main---------------------------------------------*/
-int main(int argc, char const *argv[])
+auto solve()
 {
     get_input();
     auto start = chrono::high_resolution_clock::now();
     backtracking(sudoku);
     auto stop = chrono::high_resolution_clock::now();
-    result();
     chrono::duration<double, milli> duration = stop - start;
     cout << "Algo runtime : " << duration.count() << "ms" << endl;
+    return sudoku;
 }
 

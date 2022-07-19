@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Mon Jul 18 22:35:01 2022
+# Make data base, printed on Tue Jul 19 12:39:58 2022
 
 # Variables
 
@@ -25,11 +26,15 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/tongvietdung/.gtkrc:/home/tongvietdung/.conf
 # makefile (from 'Makefile', line 44)
 MD := mkdir -p
 # environment
+KONSOLE_DBUS_SERVICE = :1.27
+# environment
 LC_NAME = en_AG
 # environment
 LC_NUMERIC = en_AG
 # environment
-VSCODE_CWD = /home/tongvietdung
+VSCODE_CWD = /home/tongvietdung/Documents/dev/sudoku_solver
+# environment
+WINDOWID = 62914567
 # makefile (from 'Makefile', line 51)
 LIBS := -Llib
 # environment
@@ -41,6 +46,8 @@ GTK3_MODULES = xapp-gtk3-module
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
+KONSOLE_VERSION = 220403
+# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
@@ -49,15 +56,19 @@ PWD = /home/tongvietdung/Documents/dev/sudoku_solver
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
 MAIL = /var/spool/mail/tongvietdung
 # environment
-OLDPWD = /home/tongvietdung
+OLDPWD = /home/tongvietdung/Documents/dev
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_CODE_CACHE_PATH = /home/tongvietdung/.config/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
@@ -68,6 +79,8 @@ XAUTHORITY = /home/tongvietdung/.Xauthority
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+COLORFGBG = 15;0
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -89,23 +102,31 @@ XDG_CONFIG_DIRS = /home/tongvietdung/.config/kdedefaults:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
+P9K_SSH = 0
+# environment
 XCURSOR_THEME = PearDarkCursors
 # environment
 XDG_SESSION_DESKTOP = KDE
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
+# environment
+CONDA_SHLVL = 1
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 62867
+ZSH = /home/tongvietdung/.oh-my-zsh
+# environment
+VSCODE_PID = 3742
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+CONDA_PYTHON_EXE = /home/tongvietdung/miniconda3/bin/python
 # makefile (from 'Makefile', line 48)
 INCLUDES := -Iinclude -Iinclude/imgui
 # environment
-SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/734,unix/Poggo-Dogu:/tmp/.ICE-unix/734
+SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/745,unix/Poggo-Dogu:/tmp/.ICE-unix/745
 # automatic
 *F = $(notdir $*)
 # environment
@@ -117,25 +138,33 @@ LIB := lib
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
+P9K_TTY = old
+# environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # makefile (from 'Makefile', line 24)
 INCLUDE := include
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+CONDA_PREFIX = /home/tongvietdung/miniconda3
 # makefile
 SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 1
+SHLVL = 2
+# environment
+PROFILEHOME = 
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+PATH = /home/tongvietdung/miniconda3/bin:/home/tongvietdung/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 # default
 MAKEFILES := 
+# environment
+LANGUAGE = 
 # environment
 LC_MONETARY = en_AG
 # environment
@@ -147,7 +176,7 @@ LC_TIME = en_AG
 # makefile (from 'Makefile', line 38)
 MAIN := main
 # environment
-INVOCATION_ID = a229afb4d3ad43d5832f798bef3b48e9
+INVOCATION_ID = 898d76403d4f409c99a17db164019f82
 # makefile (from 'Makefile', line 41)
 LIBDIRS := lib
 # environment
@@ -162,20 +191,26 @@ INCLUDEDIRS := include include/imgui
 XDG_SEAT = seat0
 # environment
 XDG_CURRENT_DESKTOP = KDE
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
 # automatic
 +F = $(notdir $+)
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
+LESS = -R
+# environment
 DESKTOP_SESSION = plasma
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # makefile (from 'Makefile', line 57)
-OBJECTS := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+OBJECTS := src/main.o src/vendor/imgui/imgui.o src/vendor/imgui/imgui_demo.o src/vendor/imgui/imgui_draw.o src/vendor/imgui/imgui_impl_glfw.o src/vendor/imgui/imgui_impl_opengl3.o src/vendor/imgui/imgui_tables.o src/vendor/imgui/imgui_widgets.o
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 BROWSER = firefox
+# environment
+CONDA_DEFAULT_ENV = base
 # environment
 LOGNAME = tongvietdung
 # environment
@@ -183,7 +218,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 769
+SYSTEMD_EXEC_PID = 922
 # makefile (from 'Makefile', line 43)
 RM = rm -f
 # environment
@@ -203,11 +238,15 @@ KDE_SESSION_UID = 1000
 # makefile (from 'Makefile', line 42)
 FIXPATH = $1
 # environment
-MANAGERPID = 687
+KONSOLE_DBUS_SESSION = /Sessions/1
+# environment
+MANAGERPID = 698
 # environment
 LC_MEASUREMENT = en_AG
 # makefile (from 'Makefile', line 39)
-SOURCEDIRS := src
+SOURCEDIRS := src src/vendor src/vendor/imgui
+# environment
+PAGER = less
 # environment
 _ = /usr/bin/make
 # environment
@@ -215,7 +254,11 @@ LC_PAPER = en_AG
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:25907
+COLORTERM = truecolor
+# environment
+_CE_M = 
+# environment
+JOURNAL_STREAM = 8:26010
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -227,8 +270,9 @@ HOME = /home/tongvietdung
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
- 
 VSCODE_IPC_HOOK = /run/user/1000/vscode-3526e221-1.69.1-main.sock
+# environment
+TERM = xterm-256color
 # environment
 XDG_SESSION_ID = 2
 # environment
@@ -242,11 +286,15 @@ SUFFIXES :=
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # environment
+_P9K_TTY = /dev/pts/0
+# environment
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # makefile (from 'Makefile', line 10)
 CXXFLAGS := -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw
+# environment
+SHELL_SESSION_ID = cac4953314a0422fa1697c9c87502154
 # environment
 KDE_SESSION_VERSION = 5
 # default
@@ -256,13 +304,17 @@ CXX = g++
 # makefile (from 'Makefile', line 15)
 LFLAGS = 
 # makefile (from 'Makefile', line 54)
-SOURCES := src/imgui.cpp src/imgui_demo.cpp src/imgui_draw.cpp src/imgui_impl_glfw.cpp src/imgui_impl_opengl3.cpp src/imgui_tables.cpp src/imgui_widgets.cpp src/main.cpp src/solver.cpp
+SOURCES := src/main.cpp src/vendor/imgui/imgui.cpp src/vendor/imgui/imgui_demo.cpp src/vendor/imgui/imgui_draw.cpp src/vendor/imgui/imgui_impl_glfw.cpp src/vendor/imgui/imgui_impl_opengl3.cpp src/vendor/imgui/imgui_tables.cpp src/vendor/imgui/imgui_widgets.cpp
 # environment
 KDE_FULL_SESSION = true
 # environment
+CONDA_EXE = /home/tongvietdung/miniconda3/bin/conda
+# environment
+_CE_CONDA = 
+# environment
 LC_IDENTIFICATION = en_AG
 # variable set hash-table stats:
-# Load=125/1024=12%, Rehash=0, Collisions=11/193=6%
+# Load=151/1024=15%, Rehash=0, Collisions=18/219=8%
 
 # Pattern-specific Variable Values
 
@@ -270,10 +322,12 @@ LC_IDENTIFICATION = en_AG
 
 # Directories
 
-# src (device 66311, inode 6176064): 21 files, no impossibilities.
-# . (device 66311, inode 6175812): 8 files, no impossibilities.
+# src/vendor/imgui (device 66311, inode 6176770): 16 files, no impossibilities.
+# src (device 66311, inode 6176064): 7 files, no impossibilities.
+# . (device 66311, inode 6175812): 11 files, no impossibilities.
+# src/vendor (device 66311, inode 6177144): 3 files, no impossibilities.
 
-# 29 files, no impossibilities in 2 directories.
+# 37 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -282,44 +336,38 @@ LC_IDENTIFICATION = en_AG
 # Files
 
 # Not a target:
-src/solver.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:32:01.745040768
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/imgui.o:
+src/vendor/imgui/imgui.o:
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 22:30:24.055067516
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:31:19.445053211
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/imgui_draw.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:30:26.135067022
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/imgui_tables.o:
+src/vendor/imgui/imgui_tables.o:
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 22:31:23.185052162
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/imgui_impl_glfw.o:
+src/vendor/imgui/imgui_widgets.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:31:24.725051726
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/vendor/imgui/imgui_impl_glfw.o:
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 22:30:26.295066983
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-07-18 22:31:19.445053211
 #  File has been updated.
 #  Successfully updated.
 
@@ -341,9 +389,16 @@ clean:
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
 
 # Not a target:
+src/vendor/imgui/imgui_draw.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:30:26.135067022
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:32:01.445040861
+#  Last modified 2022-07-19 00:15:44.945325101
 #  File has been updated.
 #  Successfully updated.
 
@@ -355,13 +410,12 @@ src/main.o:
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-18 22:32:20.165034965
+#  Last modified 2022-07-19 00:15:44.945325101
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 71):
 	$(MD) $(OUTPUT)
 
- 
 all: output main
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -381,7 +435,7 @@ run: all
 	./$(OUTPUTMAIN)
 	@echo Executing 'run: all' complete!
 
-main: src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+main: src/main.o src/vendor/imgui/imgui.o src/vendor/imgui/imgui_demo.o src/vendor/imgui/imgui_draw.o src/vendor/imgui/imgui_impl_glfw.o src/vendor/imgui/imgui_impl_opengl3.o src/vendor/imgui/imgui_tables.o src/vendor/imgui/imgui_widgets.o
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
 #  File does not exist.
@@ -392,15 +446,15 @@ main: src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/im
 # automatic
 # * := 
 # automatic
-# < := src/imgui.o
+# < := src/main.o
 # automatic
-# + := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# + := src/main.o src/vendor/imgui/imgui.o src/vendor/imgui/imgui_demo.o src/vendor/imgui/imgui_draw.o src/vendor/imgui/imgui_impl_glfw.o src/vendor/imgui/imgui_impl_opengl3.o src/vendor/imgui/imgui_tables.o src/vendor/imgui/imgui_widgets.o
 # automatic
 # % := 
 # automatic
-# ^ := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# ^ := src/main.o src/vendor/imgui/imgui.o src/vendor/imgui/imgui_demo.o src/vendor/imgui/imgui_draw.o src/vendor/imgui/imgui_impl_glfw.o src/vendor/imgui/imgui_impl_opengl3.o src/vendor/imgui/imgui_tables.o src/vendor/imgui/imgui_widgets.o
 # automatic
-# ? := src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/imgui_impl_opengl3.o src/imgui_tables.o src/imgui_widgets.o src/main.o src/solver.o
+# ? := src/main.o src/vendor/imgui/imgui.o src/vendor/imgui/imgui_demo.o src/vendor/imgui/imgui_draw.o src/vendor/imgui/imgui_impl_glfw.o src/vendor/imgui/imgui_impl_opengl3.o src/vendor/imgui/imgui_tables.o src/vendor/imgui/imgui_widgets.o
 # automatic
 # | := 
 # variable set hash-table stats:
@@ -409,23 +463,9 @@ main: src/imgui.o src/imgui_demo.o src/imgui_draw.o src/imgui_impl_glfw.o src/im
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS)
 
 # Not a target:
-src/imgui_impl_opengl3.o:
+src/vendor/imgui/imgui_impl_opengl3.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:31:22.215052437
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/imgui_widgets.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:31:24.725051726
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/imgui_demo.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:30:24.825067332
+#  Last modified 2022-07-18 23:39:36.058894391
 #  File has been updated.
 #  Successfully updated.
 
@@ -440,20 +480,27 @@ src/imgui_demo.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+src/vendor/imgui/imgui_demo.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-18 22:30:24.825067332
+#  File has been updated.
+#  Successfully updated.
+
 # files hash-table stats:
-# Load=19/1024=2%, Rehash=0, Collisions=0/47=0%
+# Load=18/1024=2%, Rehash=0, Collisions=0/45=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 46 / storage = 553 B / avg = 12 B
-# current buf: size = 8162 B / used = 553 B / count = 46 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 51 / storage = 686 B / avg = 13 B
+# current buf: size = 8162 B / used = 686 B / count = 51 / avg = 13 B
 
-# strcache performance: lookups = 67 / hit rate = 31%
+# strcache performance: lookups = 76 / hit rate = 32%
 # hash-table stats:
-# Load=46/8192=1%, Rehash=0, Collisions=0/67=0%
-# Finished Make data base on Mon Jul 18 22:35:01 2022
+# Load=51/8192=1%, Rehash=0, Collisions=0/76=0%
+# Finished Make data base on Tue Jul 19 12:39:58 2022
 
  
