@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 13:26:56 2022
+# Make data base, printed on Tue Jul 19 19:56:01 2022
 
 # Variables
 
@@ -29,7 +29,7 @@ LC_NAME = en_AG
 # environment
 LC_NUMERIC = en_AG
 # environment
-VSCODE_CWD = /home/tongvietdung/Documents/dev
+VSCODE_CWD = /home/tongvietdung
 # makefile (from 'Makefile', line 51)
 LIBS := -Llib
 # environment
@@ -59,7 +59,7 @@ OLDPWD = /home/tongvietdung
 # environment
 VSCODE_CODE_CACHE_PATH = /home/tongvietdung/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
 # environment
 LANG = C
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 25839
+VSCODE_PID = 2806
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -105,7 +105,7 @@ XDG_SESSION_TYPE = x11
 # makefile (from 'Makefile', line 48)
 INCLUDES := -Iinclude -Iinclude/imgui
 # environment
-SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/745,unix/Poggo-Dogu:/tmp/.ICE-unix/745
+SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/752,unix/Poggo-Dogu:/tmp/.ICE-unix/752
 # automatic
 *F = $(notdir $*)
 # environment
@@ -147,7 +147,7 @@ LC_TIME = en_AG
 # makefile (from 'Makefile', line 38)
 MAIN := main
 # environment
-INVOCATION_ID = e1346ddc1a2e4527b584deac8f690e3e
+INVOCATION_ID = 3f4aa98d3a7e424f806ba5b5b0af2001
 # makefile (from 'Makefile', line 41)
 LIBDIRS := lib
 # environment
@@ -183,7 +183,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 808
+SYSTEMD_EXEC_PID = 813
 # makefile (from 'Makefile', line 43)
 RM = rm -f
 # environment
@@ -203,7 +203,7 @@ KDE_SESSION_UID = 1000
 # makefile (from 'Makefile', line 42)
 FIXPATH = $1
 # environment
-MANAGERPID = 698
+MANAGERPID = 705
 # environment
 LC_MEASUREMENT = en_AG
 # makefile (from 'Makefile', line 39)
@@ -215,7 +215,7 @@ LC_PAPER = en_AG
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:17903
+JOURNAL_STREAM = 8:19929
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -286,7 +286,7 @@ LC_IDENTIFICATION = en_AG
 src/vendor/imgui/imgui.o:
 #  Implicit rule search has been done.
  
-#  Last modified 2022-07-18 22:30:24.055067516
+#  Last modified 2022-07-19 17:04:41.018371621
 #  File has been updated.
 #  Successfully updated.
 
@@ -345,7 +345,7 @@ src/vendor/imgui/imgui_draw.o:
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 13:21:20.52418226
+#  Last modified 2022-07-19 17:59:49.743919092
 #  File has been updated.
 #  Successfully updated.
 
@@ -357,7 +357,7 @@ src/main.o:
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-19 13:21:20.52418226
+#  Last modified 2022-07-19 17:59:49.743919092
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 71):
@@ -430,7 +430,7 @@ src/vendor/imgui/imgui_impl_opengl3.o:
 # Not a target:
 src/vendor/imgui/imgui_demo.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 13:18:45.254178893
+#  Last modified 2022-07-19 17:09:07.168967338
 #  File has been updated.
 #  Successfully updated.
 
@@ -448,6 +448,6 @@ src/vendor/imgui/imgui_demo.o:
 # strcache performance: lookups = 76 / hit rate = 32%
 # hash-table stats:
 # Load=51/8192=1%, Rehash=0, Collisions=0/76=0%
-# Finished Make data base on Tue Jul 19 13:26:56 2022
+# Finished Make data base on Tue Jul 19 19:56:01 2022
 
  

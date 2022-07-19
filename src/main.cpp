@@ -11,7 +11,7 @@
 #include <GLES2/gl2.h>
 #endif
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
-#include "backtracking.h"
+#include "solver.h"
 
 // [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
 // To link with VS2010-era libraries, VS2015+ requires linking with legacy_stdio_definitions.lib, which we do using this pragma.
@@ -105,10 +105,14 @@ int main(int, char**)
     //IM_ASSERT(font != NULL);
 
     // My Code to run outside loop
-    Backtracking solver;
-    solver.get_input();
-    double runtime = solver.solve();
 
+    Solver solver;
+    solver.get_input();
+    // Backtracking
+    double runtime_backtracking = solver.solve_backtracking();
+    // Simulated annealing
+    double runtime_sa = solver.solve_sa();
+    solver.solve_sa();
     // Our state
     bool show_demo_window = true;
     bool show_another_window = false;
@@ -168,6 +172,7 @@ int main(int, char**)
         
         bool show_close = true;
         // My Code to run in loop
+        // Backtracking window
         ImGui::Begin("Backtracking Algorithm", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
             ImGui::BeginChild("Original Sudoku", ImVec2(145, 180));
                 ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original Sudoku");
@@ -188,15 +193,29 @@ int main(int, char**)
                 for (int row = 0; row < 9; row++) {
                     string rowStr = "";
                     for (int col = 0; col < 9; col++) {
-                        ImGui::Text(to_string(solver.result[row][col]).c_str());
+                        ImGui::Text(to_string(solver.result_backtracking[row][col]).c_str());
                         ImGui::SameLine();
                     }
                     ImGui::Text("");
                 }
             ImGui::EndChild();
-            ImGui::Text("Runtime %f ms", runtime);
+            ImGui::Text("Runtime %f ms", runtime_backtracking);
         ImGui::End();
 
+        // Simulated Annealing window
+        ImGui::Begin("Simulated Annealing", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
+            ImGui::BeginChild("Solution", ImVec2(145, 180));
+                ImGui::Text("Cost %d", solver.current_cost);
+                for (int row = 0; row < 9; row++) {
+                    string rowStr = "";
+                    for (int col = 0; col < 9; col++) {
+                        ImGui::Text(to_string(solver.result_sa[row][col]).c_str());
+                        ImGui::SameLine();
+                    }
+                    ImGui::Text("");
+                }
+            ImGui::EndChild();
+        ImGui::End();
 
         // Rendering
         ImGui::Render();
