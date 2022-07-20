@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 19:56:01 2022
+# Make data base, printed on Wed Jul 20 17:50:51 2022
 
 # Variables
 
@@ -59,7 +59,7 @@ OLDPWD = /home/tongvietdung
 # environment
 VSCODE_CODE_CACHE_PATH = /home/tongvietdung/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
 LANG = C
 # environment
@@ -97,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 2806
+VSCODE_PID = 33819
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -105,7 +105,7 @@ XDG_SESSION_TYPE = x11
 # makefile (from 'Makefile', line 48)
 INCLUDES := -Iinclude -Iinclude/imgui
 # environment
-SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/752,unix/Poggo-Dogu:/tmp/.ICE-unix/752
+SESSION_MANAGER = local/Poggo-Dogu:@/tmp/.ICE-unix/750,unix/Poggo-Dogu:/tmp/.ICE-unix/750
 # automatic
 *F = $(notdir $*)
 # environment
@@ -147,7 +147,7 @@ LC_TIME = en_AG
 # makefile (from 'Makefile', line 38)
 MAIN := main
 # environment
-INVOCATION_ID = 3f4aa98d3a7e424f806ba5b5b0af2001
+INVOCATION_ID = 3df2f3be98154444bec43e88f3ab923f
 # makefile (from 'Makefile', line 41)
 LIBDIRS := lib
 # environment
@@ -183,7 +183,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 813
+SYSTEMD_EXEC_PID = 785
 # makefile (from 'Makefile', line 43)
 RM = rm -f
 # environment
@@ -203,7 +203,7 @@ KDE_SESSION_UID = 1000
 # makefile (from 'Makefile', line 42)
 FIXPATH = $1
 # environment
-MANAGERPID = 705
+MANAGERPID = 703
 # environment
 LC_MEASUREMENT = en_AG
 # makefile (from 'Makefile', line 39)
@@ -215,7 +215,7 @@ LC_PAPER = en_AG
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-JOURNAL_STREAM = 8:19929
+JOURNAL_STREAM = 8:15200
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -270,11 +270,11 @@ LC_IDENTIFICATION = en_AG
 # Directories
 
 # src/vendor/imgui (device 66311, inode 6176770): 16 files, no impossibilities.
-# src (device 66311, inode 6176064): 7 files, no impossibilities.
-# . (device 66311, inode 6175812): 11 files, no impossibilities.
+# src (device 66311, inode 6176064): 8 files, no impossibilities.
+# . (device 66311, inode 6175812): 12 files, no impossibilities.
 # src/vendor (device 66311, inode 6177144): 3 files, no impossibilities.
 
-# 37 files, no impossibilities in 4 directories.
+# 39 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -285,8 +285,7 @@ LC_IDENTIFICATION = en_AG
 # Not a target:
 src/vendor/imgui/imgui.o:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-07-19 17:04:41.018371621
+#  Last modified 2022-07-20 17:26:40.522681771
 #  File has been updated.
 #  Successfully updated.
 
@@ -300,6 +299,7 @@ src/vendor/imgui/imgui_tables.o:
 # Not a target:
 src/vendor/imgui/imgui_widgets.o:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-07-18 22:31:24.725051726
 #  File has been updated.
 #  Successfully updated.
@@ -314,7 +314,7 @@ src/vendor/imgui/imgui_impl_glfw.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-18 22:31:19.445053211
+#  Last modified 2022-07-20 17:08:39.051640717
 #  File has been updated.
 #  Successfully updated.
 
@@ -345,7 +345,7 @@ src/vendor/imgui/imgui_draw.o:
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 17:59:49.743919092
+#  Last modified 2022-07-20 17:48:40.104104502
 #  File has been updated.
 #  Successfully updated.
 
@@ -357,7 +357,7 @@ src/main.o:
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-19 17:59:49.743919092
+#  Last modified 2022-07-20 17:48:40.114104517
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 71):
@@ -430,7 +430,7 @@ src/vendor/imgui/imgui_impl_opengl3.o:
 # Not a target:
 src/vendor/imgui/imgui_demo.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 17:09:07.168967338
+#  Last modified 2022-07-20 16:37:20.110689658
 #  File has been updated.
 #  Successfully updated.
 
@@ -442,12 +442,12 @@ src/vendor/imgui/imgui_demo.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 51 / storage = 686 B / avg = 13 B
-# current buf: size = 8162 B / used = 686 B / count = 51 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 53 / storage = 701 B / avg = 13 B
+# current buf: size = 8162 B / used = 701 B / count = 53 / avg = 13 B
 
-# strcache performance: lookups = 76 / hit rate = 32%
+# strcache performance: lookups = 78 / hit rate = 32%
 # hash-table stats:
-# Load=51/8192=1%, Rehash=0, Collisions=0/76=0%
-# Finished Make data base on Tue Jul 19 19:56:01 2022
+# Load=53/8192=1%, Rehash=0, Collisions=0/78=0%
+# Finished Make data base on Wed Jul 20 17:50:51 2022
 
  

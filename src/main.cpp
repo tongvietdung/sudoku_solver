@@ -12,6 +12,7 @@
 #endif
 #include <GLFW/glfw3.h> // Will drag system OpenGL headers
 #include "solver.h"
+#include <stdio.h>
 
 // [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
 // To link with VS2010-era libraries, VS2015+ requires linking with legacy_stdio_definitions.lib, which we do using this pragma.
@@ -104,8 +105,20 @@ int main(int, char**)
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != NULL);
 
-    // My Code to run outside loop
+    // char tmp[256];
+    // cout << getcwd(tmp, 256);
+    // cout << tmp << endl;
+    // FILE* f = fopen("src/text.txt", "rb");
+    // if (f == NULL) {
+    //     cout << "Not exists";
+    // } else {
+    //     cout << "Exists";
+    // }
+    ImFont* myfont = io.Fonts->AddFontFromFileTTF("fonts/MesloLGMRegular.ttf", 20.0f);
+    io.Fonts->Build();
+    style.ScaleAllSizes(2);
 
+    // My Code to run outside loop
     Solver solver;
     solver.get_input();
     // Backtracking
@@ -170,52 +183,72 @@ int main(int, char**)
         //     ImGui::End();
         // }
         
-        bool show_close = true;
+        bool show_close = false;
         // My Code to run in loop
         // Backtracking window
         ImGui::Begin("Backtracking Algorithm", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
-            ImGui::BeginChild("Original Sudoku", ImVec2(145, 180));
+            ImGui::BeginGroup();
                 ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Original Sudoku");
-                for (int row = 0; row < 9; row++) {
-                    string rowStr = "";
-                    for (int col = 0; col < 9; col++) {
-                        ImGui::Text(to_string(solver.sudoku[row][col]).c_str());
-                        ImGui::SameLine();
+                if (ImGui::BeginTable("original", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoHostExtendX)) {
+                    for (int row = 0; row < 9; row++) {
+                        ImGui::TableNextRow();
+                        string rowStr = "";
+                        for (int col = 0; col < 9; col++) {
+                            ImGui::TableSetColumnIndex(col);
+                            if (solver.is_fixed[row][col]) {
+                                ImGui::Text(to_string(solver.sudoku[row][col]).c_str());
+                                ImU32 cell_bg_color = ImGui::GetColorU32(ImVec4(0.2f, 0.2f, 0.0f, 0.65f));
+                                ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, cell_bg_color);
+                            } else {
+                                ImU32 cell_bg_color = ImGui::GetColorU32(ImVec4(0.0f, 0.8f, 0.7f, 0.65f));
+                                ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, cell_bg_color);
+                            }
+                        }
                     }
-                    ImGui::Text("");
+                    ImGui::EndTable();
                 }
-            ImGui::EndChild();
+            ImGui::EndGroup();
 
             ImGui::SameLine();
 
-            ImGui::BeginChild("Solution", ImVec2(145, 180));
+            ImGui::BeginGroup();
                 ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Solution");
-                for (int row = 0; row < 9; row++) {
-                    string rowStr = "";
-                    for (int col = 0; col < 9; col++) {
-                        ImGui::Text(to_string(solver.result_backtracking[row][col]).c_str());
-                        ImGui::SameLine();
+                if (ImGui::BeginTable("solution", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoHostExtendX)) {
+                    for (int row = 0; row < 9; row++) {
+                        ImGui::TableNextRow();
+                        string rowStr = "";
+                        for (int col = 0; col < 9; col++) {
+                            ImGui::TableSetColumnIndex(col);
+                            ImGui::Text(to_string(solver.result_backtracking[row][col]).c_str());
+                            if (solver.is_fixed[row][col]) {
+                                ImU32 cell_bg_color = ImGui::GetColorU32(ImVec4(0.2f, 0.2f, 0.0f, 0.65f));
+                                ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, cell_bg_color);
+                            } else {
+                                ImU32 cell_bg_color = ImGui::GetColorU32(ImVec4(0.0f, 0.8f, 0.7f, 0.65f));
+                                ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, cell_bg_color);
+                            }
+                        }
                     }
-                    ImGui::Text("");
+                    ImGui::EndTable();
                 }
-            ImGui::EndChild();
+            ImGui::EndGroup();
             ImGui::Text("Runtime %f ms", runtime_backtracking);
         ImGui::End();
 
         // Simulated Annealing window
-        ImGui::Begin("Simulated Annealing", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
-            ImGui::BeginChild("Solution", ImVec2(145, 180));
-                ImGui::Text("Cost %d", solver.current_cost);
-                for (int row = 0; row < 9; row++) {
-                    string rowStr = "";
-                    for (int col = 0; col < 9; col++) {
-                        ImGui::Text(to_string(solver.result_sa[row][col]).c_str());
-                        ImGui::SameLine();
-                    }
-                    ImGui::Text("");
-                }
-            ImGui::EndChild();
-        ImGui::End();
+        // ImGui::Begin("Simulated Annealing", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
+        //     ImGui::BeginChild("Solution", ImVec2(145, 180));
+        //         ImGui::Text("Cost %d", solver.current_cost);
+        //         for (int row = 0; row < 9; row++) {
+        //             string rowStr = "";
+        //             for (int col = 0; col < 9; col++) {
+        //                 ImGui::Text(to_string(solver.result_sa[row][col]).c_str());
+        //                 ImGui::SameLine();
+        //             }
+        //             ImGui::Text("");
+        //         }
+        //     ImGui::EndChild();
+        // ImGui::End();
 
         // Rendering
         ImGui::Render();
