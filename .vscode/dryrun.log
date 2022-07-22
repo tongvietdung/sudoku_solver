@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/tongvietdung/Documents/dev/sudoku_solver'
+make: Entering directory '/home/tongvietdung/Documents/dev/misc.'
 mkdir -p output
 g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/main.cpp  -o src/main.o
 g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/vendor/imgui/imgui.cpp  -o src/vendor/imgui/imgui.o
@@ -11,5 +11,5 @@ g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c s
 g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -c src/vendor/imgui/imgui_widgets.cpp  -o src/vendor/imgui/imgui_widgets.o
 g++ -std=c++17 -Wall -Wextra -g -lGLU -lGL -lglfw -Iinclude -Iinclude/imgui -o output/main src/main.o src/vendor/imgui/imgui.o src/vendor/imgui/imgui_demo.o src/vendor/imgui/imgui_draw.o src/vendor/imgui/imgui_impl_glfw.o src/vendor/imgui/imgui_impl_opengl3.o src/vendor/imgui/imgui_tables.o src/vendor/imgui/imgui_widgets.o  -Llib
 echo Executing 'all' complete!
-make: Leaving directory '/home/tongvietdung/Documents/dev/sudoku_solver'
+make: Leaving directory '/home/tongvietdung/Documents/dev/misc.'
  
