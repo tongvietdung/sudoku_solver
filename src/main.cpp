@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
 		return 1;
 	}
 
-	GLFWwindow *window = glfwCreateWindow(900, 600, "Testing", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(900, 600, "Sudoku Solver", NULL, NULL);
 	if (window == NULL) {
 		return 1;
 	}
@@ -81,7 +81,7 @@ int main(int argc, char const *argv[])
 	ImGui::StyleColorsClassic();
     ImGuiStyle& style = ImGui::GetStyle();
 
-    ImFont* myfont = io.Fonts->AddFontFromFileTTF("fonts/MesloLGMRegular.ttf", 20.0f);
+    ImFont* myfont = io.Fonts->AddFontFromFileTTF("misc/fonts/MesloLGMRegular.ttf", 20.0f);
     io.Fonts->Build();
     style.ScaleAllSizes(2);
 
@@ -103,7 +103,7 @@ int main(int argc, char const *argv[])
             // Do your thang here
             ImGui::Begin("Backtracking Algorithm", &show_close, ImGuiWindowFlags_AlwaysAutoResize);
                 ImGui::BeginGroup();
-                    ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Sudoku");
+                    ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Solution");
                     if (ImGui::BeginTable("solution", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoHostExtendX)) {
                         for (int row = 0; row < 9; row++) {
                             ImGui::TableNextRow();

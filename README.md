@@ -6,3 +6,6 @@
  - GLU
  - GL
  - glfw
+
+## Screenshots
+![Backtracking screenshot](misc/backtracking.png)
