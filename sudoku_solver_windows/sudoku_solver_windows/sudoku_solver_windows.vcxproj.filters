@@ -39,9 +39,13 @@
     <ClCompile Include="src\vendor\imgui\imgui_widgets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\SA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="dependencies\imgui\.editorconfig" />
+    <None Include="imgui.ini" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\imgui\imconfig.h">
@@ -83,6 +87,9 @@
     <ClInclude Include="dependencies\GLFW\glfw3native.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dependencies\algorithms\SA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="dependencies\imgui\LICENSE.txt" />
@@ -90,5 +97,13 @@
   <ItemGroup>
     <Library Include="dependencies\GLFW\lib-vc2022\glfw3.lib" />
     <Library Include="dependencies\GLFW\lib-vc2022\glfw3_mt.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="dependencies\imgui\misc\fonts\Cousine-Regular.ttf" />
+    <Font Include="dependencies\imgui\misc\fonts\DroidSans.ttf" />
+    <Font Include="dependencies\imgui\misc\fonts\Karla-Regular.ttf" />
+    <Font Include="dependencies\imgui\misc\fonts\ProggyClean.ttf" />
+    <Font Include="dependencies\imgui\misc\fonts\ProggyTiny.ttf" />
+    <Font Include="dependencies\imgui\misc\fonts\Roboto-Medium.ttf" />
   </ItemGroup>
 </Project>
