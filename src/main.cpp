@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <recursive.h>
 #include "backtracking.h"
 #include "sa.h"
 

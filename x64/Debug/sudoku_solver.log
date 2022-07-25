@@ -1,0 +1,66 @@
+﻿  main.cpp
+D:\Projects\sudoku_solver\include\backtracking.h(49,82): error C2061: syntax error: identifier 'GLFWwindow'
+D:\Projects\sudoku_solver\include\backtracking.h(119,106): error C2061: syntax error: identifier 'GLFWwindow'
+D:\Projects\sudoku_solver\include\backtracking.h(53,9): error C3861: 'glClearColor': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(54,11): error C2065: 'GL_COLOR_BUFFER_BIT': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(54,3): error C3861: 'glClear': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(57,3): error C3861: 'ImGui_ImplOpenGL3_NewFrame': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(58,3): error C3861: 'ImGui_ImplGlfw_NewFrame': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(59,3): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(59,10): error C3861: 'NewFrame': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(62,9): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(62,61): error C2065: 'ImGuiWindowFlags_AlwaysAutoResize': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(62,16): error C3861: 'Begin': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(63,13): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(63,20): error C3861: 'BeginGroup': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(64,17): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(64,36): error C3861: 'ImVec4': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(64,24): error C3861: 'TextColored': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(65,21): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(65,54): error C2065: 'ImGuiTableFlags_Borders': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(65,80): error C2065: 'ImGuiTableFlags_NoHostExtendX': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(65,28): error C3861: 'BeginTable': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(67,25): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(67,32): error C3861: 'TableNextRow': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(70,29): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(70,36): error C3861: 'TableSetColumnIndex': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(72,33): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(72,52): error C3861: 'ImVec4': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(72,84): error C3861: 'to_string': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(72,40): error C3861: 'TextColored': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(74,33): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(74,52): error C3861: 'ImVec4': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(74,84): error C3861: 'to_string': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(74,40): error C3861: 'TextColored': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(81,21): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(81,28): error C3861: 'EndTable': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(83,13): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(83,20): error C3861: 'EndGroup': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(84,9): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(84,16): error C3861: 'End': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(87,3): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(87,10): error C3861: 'Render': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(88,42): error C2653: 'ImGui': is not a class or namespace name
+D:\Projects\sudoku_solver\include\backtracking.h(88,49): error C3861: 'GetDrawData': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(88,9): error C3861: 'ImGui_ImplOpenGL3_RenderDrawData': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(91,32): error C2065: 'window': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(91,9): error C3861: 'glfwGetFramebufferSize': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(92,9): error C3861: 'glViewport': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(93,25): error C2065: 'window': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(93,9): error C3861: 'glfwSwapBuffers': identifier not found
+D:\Projects\sudoku_solver\include\backtracking.h(109,52): error C2065: 'window': undeclared identifier
+D:\Projects\sudoku_solver\include\backtracking.h(121,40): error C2065: 'window': undeclared identifier
+D:\Projects\sudoku_solver\src\main.cpp(25,12): error C3861: 'getline': identifier not found
+D:\Projects\sudoku_solver\src\main.cpp(58,2): error C2065: 'recursive': undeclared identifier
+D:\Projects\sudoku_solver\src\main.cpp(58,12): error C2146: syntax error: missing ';' before identifier 'res'
+D:\Projects\sudoku_solver\src\main.cpp(58,12): error C2065: 'res': undeclared identifier
+D:\Projects\sudoku_solver\src\main.cpp(91,73): error C2660: 'Backtracking::solve': function does not take 4 arguments
+D:\Projects\sudoku_solver\include\backtracking.h(119,25): message : see declaration of 'Backtracking::solve'
+D:\Projects\sudoku_solver\src\main.cpp(113,88): error C3861: 'to_string': identifier not found
+D:\Projects\sudoku_solver\src\main.cpp(113,123): error C2660: 'ImGui::TextColored': function does not take 1 arguments
+D:\Projects\sudoku_solver\include\imgui\imgui.h(487,29): message : see declaration of 'ImGui::TextColored'
+D:\Projects\sudoku_solver\src\main.cpp(115,88): error C3861: 'to_string': identifier not found
+D:\Projects\sudoku_solver\src\main.cpp(115,123): error C2660: 'ImGui::TextColored': function does not take 1 arguments
+D:\Projects\sudoku_solver\include\imgui\imgui.h(487,29): message : see declaration of 'ImGui::TextColored'
+  imgui_widgets.cpp
+  Generating Code...
