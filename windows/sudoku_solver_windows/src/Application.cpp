@@ -9,41 +9,39 @@
 const unsigned int SCR_WIDTH = 700;
 const unsigned int SCR_HEIGHT = 600;
 
-static char sudoku_text[9 * 9][2];
+static char sudoku_input[9 * 9][2];
 static std::vector<std::vector<int>> sudoku;
-static int solve_count = 0;
 
-void Solve() {
-    solve_count++;
+void ParseInput() {
+    int row, col;
+    for (int cell = 0; cell < 9 * 9; cell++)
+    {
+        row = cell / 10;
+        col = cell % 9;
+        if (sudoku_input[cell][0] == '\0')
+        {
+            sudoku.at(row).at(col) = 0;
+        }
+        else {
+            sudoku.at(row).at(col) = sudoku_input[cell][0] - '0';
+        }
+    }
 }
 
 void show_sudoku_input() {
     ImGui::Begin("Sudoku Input");
         ImGui::BeginTable("sudoku_input", 9);
-        int row, col;
         for (int cell = 0; cell < 9 * 9; cell++)
         {
-            row = cell / 10;
-            col = cell % 9;
-
             ImGui::TableNextColumn();
             ImGui::PushID(cell);
-            ImGui::InputText("##cell", sudoku_text[cell], IM_ARRAYSIZE(sudoku_text[cell]));
-            if (sudoku_text[cell][0] == '\0')
-            {
-                sudoku[row][col] = 0;
-            }
-            else {
-                sudoku[row][col] = sudoku_text[cell][0] - '0';
-            }
-
+            ImGui::InputText("##cell", sudoku_input[cell], IM_ARRAYSIZE(sudoku_input[cell]));
             ImGui::PopID();
         }
         ImGui::EndTable();
 
         if (ImGui::Button("Solve Sudoku")) {
-            std::cout << "Solve!" << std::endl;
-            Solve();
+            ParseInput();
         }
     ImGui::End();
 }
@@ -183,7 +181,13 @@ int main() {
         show_sudoku_input();
 
 		ImGui::Begin("Testing");
-			ImGui::Text(std::to_string(solve_count).c_str());
+            ImGui::BeginTable("sudoku", 9);
+                for (int cell = 0; cell < 9 * 9; cell++)
+                {
+                    ImGui::TableNextColumn();
+                    ImGui::Text(std::to_string(sudoku[(int)cell / 10][cell % 9]).c_str());
+                }
+            ImGui::EndTable();
 		ImGui::End();
 
 
