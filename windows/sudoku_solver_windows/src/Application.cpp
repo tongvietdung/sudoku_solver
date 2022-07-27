@@ -16,7 +16,7 @@ void ParseInput() {
     int row, col;
     for (int cell = 0; cell < 9 * 9; cell++)
     {
-        row = cell / 10;
+        row = cell / 9;
         col = cell % 9;
         if (sudoku_input[cell][0] == '\0')
         {
@@ -182,10 +182,13 @@ int main() {
 
 		ImGui::Begin("Testing");
             ImGui::BeginTable("sudoku", 9);
+                int row, col;   
                 for (int cell = 0; cell < 9 * 9; cell++)
                 {
                     ImGui::TableNextColumn();
-                    ImGui::Text(std::to_string(sudoku[(int)cell / 10][cell % 9]).c_str());
+                    row = cell / 9;
+                    col = cell % 9;
+                    ImGui::Text(std::to_string(sudoku[row][col]).c_str());
                 }
             ImGui::EndTable();
 		ImGui::End();
