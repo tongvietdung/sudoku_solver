@@ -10,24 +10,26 @@
 const unsigned int SCR_WIDTH = 700;
 const unsigned int SCR_HEIGHT = 500;
 
-static char sudoku_input[9 * 9][2];
+static int sudoku_input[9 * 9];
 static std::vector<std::vector<int>> sudoku;
 static bool is_fixed[9][9];
 
-void ParseInput() {
+void Solve() {
+    // parse input
     int row, col;
     for (int cell = 0; cell < 9 * 9; cell++)
     {
         row = cell / 9;
         col = cell % 9;
-        if (sudoku_input[cell][0] == '\0')
+        if (sudoku_input[cell] == 0)
         {
             sudoku.at(row).at(col) = 0;
         }
         else {
-            sudoku.at(row).at(col) = sudoku_input[cell][0] - '0';
+            sudoku.at(row).at(col) = sudoku_input[cell];
         }
     }
+
 }
 
 void show_sudoku_input() {
@@ -36,17 +38,43 @@ void show_sudoku_input() {
         for (int cell = 0; cell < 9 * 9; cell++)
         {
             ImGui::TableNextColumn();
+            ImGui::SetNextItemWidth(-FLT_MIN);
             ImGui::PushID(cell);
-            ImGui::InputText("##cell", sudoku_input[cell], IM_ARRAYSIZE(sudoku_input[cell]), ImGuiInputTextFlags_AutoSelectAll + ImGuiInputTextFlags_CharsDecimal);
+            ImGui::DragInt("##cell", &sudoku_input[cell], 1.0f, 0, 9);
             ImGui::PopID();
         }
         ImGui::EndTable();
 
         if (ImGui::Button("Solve Sudoku")) {
-            ParseInput();
+            Solve();
         }
     ImGui::End();
 }
+
+void show_sudoku_result() {
+    ImGui::Begin("Result");
+    ImGui::BeginTable("sudoku", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoPadInnerX + ImGuiTableFlags_NoPadOuterX + ImGuiTableFlags_RowBg);
+    int row, col;
+    for (int cell = 0; cell < 9 * 9; cell++)
+    {
+        ImGui::TableNextColumn();
+        row = cell / 9;
+        col = cell % 9;
+
+        // Fill with button and change color
+        ImGui::PushID(cell);
+        ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(0.5f, 0.6f, 0.6f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(0.5f, 0.7f, 0.7f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(0.5f, 0.8f, 0.8f));
+        ImGui::Button(std::to_string(sudoku[row][col]).c_str(), ImVec2(-FLT_MIN, 0.0f));
+        ImGui::PopStyleColor(3);
+        ImGui::PopID();
+
+    }
+    ImGui::EndTable();
+    ImGui::End();
+}
+
 void Init() {
     std::ifstream initFile("sudoku.ini");
     std::string temp;
@@ -58,7 +86,7 @@ void Init() {
         col = 0;
         while (temp.length() != 0) {
             rowInput.push_back(temp[0] - '0');
-            sudoku_input[count][0] = temp[0];
+            sudoku_input[count] = temp[0] - '0';
             if (temp[0] - '0') {
                 is_fixed[row][col] = true;
             }
@@ -198,28 +226,7 @@ int main() {
 
         show_sudoku_input();
 
-		ImGui::Begin("Result");
-            ImGui::BeginTable("sudoku", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoPadInnerX + ImGuiTableFlags_NoPadOuterX + ImGuiTableFlags_RowBg);
-                int row, col;   
-                for (int cell = 0; cell < 9 * 9; cell++)
-                {
-                    ImGui::TableNextColumn();
-                    row = cell / 9;
-                    col = cell % 9;
-
-                    // Fill with button and change color
-                    ImGui::PushID(cell);
-                    ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(0.5f, 0.6f, 0.6f));
-                    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(0.5f, 0.7f, 0.7f));
-                    ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(0.5f, 0.8f, 0.8f));
-                    ImGui::Button(std::to_string(sudoku[row][col]).c_str(), ImVec2(-FLT_MIN, 0.0f));
-                    ImGui::PopStyleColor(3);
-                    ImGui::PopID();
-                    
-                }
-            ImGui::EndTable();
-		ImGui::End();
-
+        show_sudoku_result();
 
 		ImGui::Render();
 		int display_w, display_h;
