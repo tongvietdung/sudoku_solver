@@ -46,6 +46,7 @@
   <ItemGroup>
     <None Include="dependencies\imgui\.editorconfig" />
     <None Include="imgui.ini" />
+    <None Include="sudoku.ini" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\imgui\imconfig.h">

@@ -146,6 +146,7 @@
   <ItemGroup>
     <None Include="dependencies\imgui\.editorconfig" />
     <None Include="imgui.ini" />
+    <None Include="sudoku.ini" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\algorithms\SA.h" />

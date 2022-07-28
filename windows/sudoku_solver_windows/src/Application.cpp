@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -7,10 +8,11 @@
 #include <GLFW/glfw3.h>
 
 const unsigned int SCR_WIDTH = 700;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_HEIGHT = 500;
 
 static char sudoku_input[9 * 9][2];
 static std::vector<std::vector<int>> sudoku;
+static bool is_fixed[9][9];
 
 void ParseInput() {
     int row, col;
@@ -30,12 +32,12 @@ void ParseInput() {
 
 void show_sudoku_input() {
     ImGui::Begin("Sudoku Input");
-        ImGui::BeginTable("sudoku_input", 9);
+        ImGui::BeginTable("sudoku_input", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoPadInnerX + ImGuiTableFlags_NoPadOuterX);
         for (int cell = 0; cell < 9 * 9; cell++)
         {
             ImGui::TableNextColumn();
             ImGui::PushID(cell);
-            ImGui::InputText("##cell", sudoku_input[cell], IM_ARRAYSIZE(sudoku_input[cell]));
+            ImGui::InputText("##cell", sudoku_input[cell], IM_ARRAYSIZE(sudoku_input[cell]), ImGuiInputTextFlags_AutoSelectAll + ImGuiInputTextFlags_CharsDecimal);
             ImGui::PopID();
         }
         ImGui::EndTable();
@@ -46,19 +48,35 @@ void show_sudoku_input() {
     ImGui::End();
 }
 void Init() {
-    for (int row = 0; row < 9; row++)
-    {
-        std::vector<int> temp;
-        for (int col = 0; col < 9; col++)
-        {
-            temp.push_back(0);
+    std::ifstream initFile("sudoku.ini");
+    std::string temp;
+    int row = 0;
+    int col;
+    int count = 0;
+    while (getline(initFile, temp)) {
+        std::vector<int> rowInput;
+        col = 0;
+        while (temp.length() != 0) {
+            rowInput.push_back(temp[0] - '0');
+            sudoku_input[count][0] = temp[0];
+            if (temp[0] - '0') {
+                is_fixed[row][col] = true;
+            }
+            else {
+                is_fixed[row][col] = false;
+            }
+            temp.erase(0, 2);
+            col++;
+            count++;
         }
-        sudoku.push_back(temp);
+        sudoku.push_back(rowInput);
+        row++;
     }
 }
 
 int main() {
     Init();
+
 	// Setup Window
 	if (!glfwInit()) return 1;
 
@@ -180,15 +198,24 @@ int main() {
 
         show_sudoku_input();
 
-		ImGui::Begin("Testing");
-            ImGui::BeginTable("sudoku", 9);
+		ImGui::Begin("Result");
+            ImGui::BeginTable("sudoku", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoPadInnerX + ImGuiTableFlags_NoPadOuterX + ImGuiTableFlags_RowBg);
                 int row, col;   
                 for (int cell = 0; cell < 9 * 9; cell++)
                 {
                     ImGui::TableNextColumn();
                     row = cell / 9;
                     col = cell % 9;
-                    ImGui::Text(std::to_string(sudoku[row][col]).c_str());
+
+                    // Fill with button and change color
+                    ImGui::PushID(cell);
+                    ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(0.5f, 0.6f, 0.6f));
+                    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(0.5f, 0.7f, 0.7f));
+                    ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(0.5f, 0.8f, 0.8f));
+                    ImGui::Button(std::to_string(sudoku[row][col]).c_str(), ImVec2(-FLT_MIN, 0.0f));
+                    ImGui::PopStyleColor(3);
+                    ImGui::PopID();
+                    
                 }
             ImGui::EndTable();
 		ImGui::End();
