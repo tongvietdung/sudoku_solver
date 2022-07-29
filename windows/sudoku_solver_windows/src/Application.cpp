@@ -32,13 +32,12 @@ void Solve() {
         }
     }
 
-    SA sa_algo(sudoku);
+    SA sa_algo(sudoku, is_fixed);
     result = sa_algo.Solve();
-    sa_algo.initState();
 }
 
 void show_sudoku_input() {
-    ImGui::Begin("Sudoku Input");
+    ImGui::Begin("Sudoku Input##1");
         ImGui::BeginTable("sudoku_input", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoPadInnerX + ImGuiTableFlags_NoPadOuterX);
         for (int cell = 0; cell < 9 * 9; cell++)
         {
@@ -57,7 +56,7 @@ void show_sudoku_input() {
 }
 
 void show_sudoku_result() {
-    ImGui::Begin("Result");
+    ImGui::Begin("Result##1");
     ImGui::BeginTable("sudoku", 9, ImGuiTableFlags_Borders + ImGuiTableFlags_NoPadInnerX + ImGuiTableFlags_NoPadOuterX + ImGuiTableFlags_RowBg);
     int row, col;
     for (int cell = 0; cell < 9 * 9; cell++)
