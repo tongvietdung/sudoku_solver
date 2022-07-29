@@ -1,2 +1,5 @@
 ﻿  Application.cpp
+  SA.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   sudoku_solver_windows.vcxproj -> D:\Projects\sudoku_solver\windows\x64\Debug\sudoku_solver_windows.exe

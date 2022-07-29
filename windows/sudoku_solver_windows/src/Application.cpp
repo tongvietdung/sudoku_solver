@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "algorithms\SA.h"
+
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
@@ -9,9 +11,9 @@
 
 const unsigned int SCR_WIDTH = 700;
 const unsigned int SCR_HEIGHT = 500;
-
 static int sudoku_input[9 * 9];
 static std::vector<std::vector<int>> sudoku;
+std::vector<std::vector<int>> result;
 static bool is_fixed[9][9];
 
 void Solve() {
@@ -30,6 +32,9 @@ void Solve() {
         }
     }
 
+    SA sa_algo(sudoku);
+    result = sa_algo.Solve();
+    sa_algo.initState();
 }
 
 void show_sudoku_input() {
@@ -63,11 +68,20 @@ void show_sudoku_result() {
 
         // Fill with button and change color
         ImGui::PushID(cell);
-        ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(0.5f, 0.6f, 0.6f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(0.5f, 0.7f, 0.7f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(0.5f, 0.8f, 0.8f));
-        ImGui::Button(std::to_string(sudoku[row][col]).c_str(), ImVec2(-FLT_MIN, 0.0f));
-        ImGui::PopStyleColor(3);
+        if (is_fixed[row][col]) {
+            ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(0.5f, 0.6f, 0.6f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(0.5f, 0.7f, 0.7f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(0.5f, 0.8f, 0.8f));
+            ImGui::Button(std::to_string(result[row][col]).c_str(), ImVec2(-FLT_MIN, 0.0f));
+            ImGui::PopStyleColor(3);
+        }
+        else {
+            ImGui::PushStyleColor(ImGuiCol_Button, (ImVec4)ImColor::HSV(0.0f, 0.6f, 0.6f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, (ImVec4)ImColor::HSV(0.0f, 0.7f, 0.7f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonActive, (ImVec4)ImColor::HSV(0.0f, 0.8f, 0.8f));
+            ImGui::Button(std::to_string(result[row][col]).c_str(), ImVec2(-FLT_MIN, 0.0f));
+            ImGui::PopStyleColor(3);
+        }
         ImGui::PopID();
 
     }
@@ -98,6 +112,7 @@ void Init() {
             count++;
         }
         sudoku.push_back(rowInput);
+        result.push_back(rowInput);
         row++;
     }
 }
