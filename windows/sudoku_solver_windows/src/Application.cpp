@@ -9,27 +9,31 @@
 #include "imgui_impl_opengl3.h"
 #include <GLFW/glfw3.h>
 
-const unsigned int SCR_WIDTH = 700;
+const unsigned int SCR_WIDTH = 650;
 const unsigned int SCR_HEIGHT = 500;
 static int sudoku_input[9 * 9];
 static std::vector<std::vector<int>> sudoku;
 std::vector<std::vector<int>> result;
 static bool is_fixed[9][9];
+bool parsed = false;
 
 void Solve() {
     // parse input
-    int row, col;
-    for (int cell = 0; cell < 9 * 9; cell++)
-    {
-        row = cell / 9;
-        col = cell % 9;
-        if (sudoku_input[cell] == 0)
+    if (!parsed) {
+        int row, col;
+        for (int cell = 0; cell < 9 * 9; cell++)
         {
-            sudoku.at(row).at(col) = 0;
+            row = cell / 9;
+            col = cell % 9;
+            if (sudoku_input[cell] == 0)
+            {
+                sudoku.at(row).at(col) = 0;
+            }
+            else {
+                sudoku.at(row).at(col) = sudoku_input[cell];
+            }
         }
-        else {
-            sudoku.at(row).at(col) = sudoku_input[cell];
-        }
+        parsed = true;
     }
 
     SA sa_algo(sudoku, is_fixed);
@@ -236,7 +240,7 @@ int main() {
         }
 
         ImGui::End();
-        #pragma endregion Docking setup
+        #pragma endregion
 
         show_sudoku_input();
 

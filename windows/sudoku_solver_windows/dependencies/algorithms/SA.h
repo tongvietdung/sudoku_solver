@@ -13,6 +13,8 @@ private:
 	std::vector<std::vector<int>> sudoku;
 	bool is_fixed[9][9];
 	void initState();
-	void solveCube(int, int);
+	void solveSquare(int, int);
+	int cost();
+	void randomState();
 };
 #endif
