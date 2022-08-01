@@ -15,5 +15,6 @@ private:
 	bool next_unassigned_cell(std::vector<std::vector<int>>, int&, int&);
 	bool is_valid(std::vector<std::vector<int>>, int, int, int);
 	bool backtrack(std::vector<std::vector<int>>, bool[9][9]);
+	void print_sudoku();
 };
 #endif

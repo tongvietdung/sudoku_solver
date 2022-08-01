@@ -1,4 +1,5 @@
 #include "algorithms\Backtracking.h"
+#include <iostream>
 
 Backtracking::Backtracking()
 {
@@ -78,6 +79,8 @@ bool Backtracking::backtrack(std::vector<std::vector<int>> sudoku, bool is_fixed
         if (is_valid(sudoku, row, col, candidate)) {
             // If candidate is valid, assigned to cell
             sudoku[row][col] = candidate;
+            this->sudoku = sudoku;
+            print_sudoku();
             // Recursive find next solution from current one
             if (backtrack(sudoku, is_fixed)) {
                 return true;
@@ -87,3 +90,15 @@ bool Backtracking::backtrack(std::vector<std::vector<int>> sudoku, bool is_fixed
     }
 	return false;
 }
+void Backtracking::print_sudoku() {
+    for (int row = 0; row < 9; row++) 
+    {
+        for (int col = 0; col < 9; col++)
+        {
+            std::cout << this->sudoku[row][col] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << "--------------------" << std::endl;
+}
+

@@ -28,9 +28,11 @@ void Solve() {
         if (sudoku_input[cell] == 0)
         {
             sudoku.at(row).at(col) = 0;
+            is_fixed[row][col] = false;
         }
         else {
             sudoku.at(row).at(col) = sudoku_input[cell];
+            is_fixed[row][col] = true;
         }
     }
 
