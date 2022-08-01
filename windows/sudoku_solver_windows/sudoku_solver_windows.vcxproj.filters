@@ -42,6 +42,9 @@
     <ClCompile Include="src\SA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Backtracking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="dependencies\imgui\.editorconfig" />
@@ -89,6 +92,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="dependencies\algorithms\SA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies\algorithms\Backtracking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

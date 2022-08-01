@@ -15,6 +15,6 @@ private:
 	void initState();
 	void solveSquare(int, int);
 	int cost();
-	void randomState();
+	int randomState(float);
 };
 #endif

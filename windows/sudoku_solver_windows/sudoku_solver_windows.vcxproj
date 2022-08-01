@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Backtracking.cpp" />
     <ClCompile Include="src\SA.cpp" />
     <ClCompile Include="src\vendor\imgui\imgui.cpp" />
     <ClCompile Include="src\vendor\imgui\imgui_demo.cpp" />
@@ -149,6 +150,7 @@
     <None Include="sudoku.ini" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dependencies\algorithms\Backtracking.h" />
     <ClInclude Include="dependencies\algorithms\SA.h" />
     <ClInclude Include="dependencies\GLFW\glfw3.h" />
     <ClInclude Include="dependencies\GLFW\glfw3native.h" />

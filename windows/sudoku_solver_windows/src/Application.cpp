@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "algorithms\SA.h"
+#include "algorithms\Backtracking.h"
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -19,25 +20,24 @@ bool parsed = false;
 
 void Solve() {
     // parse input
-    if (!parsed) {
-        int row, col;
-        for (int cell = 0; cell < 9 * 9; cell++)
+    int row, col;
+    for (int cell = 0; cell < 9 * 9; cell++)
+    {
+        row = cell / 9;
+        col = cell % 9;
+        if (sudoku_input[cell] == 0)
         {
-            row = cell / 9;
-            col = cell % 9;
-            if (sudoku_input[cell] == 0)
-            {
-                sudoku.at(row).at(col) = 0;
-            }
-            else {
-                sudoku.at(row).at(col) = sudoku_input[cell];
-            }
+            sudoku.at(row).at(col) = 0;
         }
-        parsed = true;
+        else {
+            sudoku.at(row).at(col) = sudoku_input[cell];
+        }
     }
 
     SA sa_algo(sudoku, is_fixed);
-    result = sa_algo.Solve();
+    Backtracking bt_algo(sudoku, is_fixed);
+    result = bt_algo.Solve();
+    //result = sa_algo.Solve();
 }
 
 void show_sudoku_input() {
